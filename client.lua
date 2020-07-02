@@ -20,13 +20,13 @@ AddEventHandler('towing', function()
 					if vehicle ~= targetVehicle then
 						AttachEntityToEntity(targetVehicle, vehicle, 20, -0.5, -5.0, 1.0, 0.0, 0.0, 0.0, false, false, false, false, 20, true)
 						currentlyTowedVehicle = targetVehicle
-						TriggerEvent("chatMessage", "^4[Tow Service]", {255, 255, 0}, "vehicle has been lifted on to tow truck")
+						TriggerEvent("chatMessage", "^4[csx-tow]", {255, 255, 0}, "vehicle has been lifted on to tow truck")
 					else
-						TriggerEvent("chatMessage", "^4[Tow Service]", {255, 255, 0}, "^8Script_Error: ^0Try again.")
+						TriggerEvent("chatMessage", "^4[csx-tow]", {255, 255, 0}, "^8INPUT_ERR: ^0Try again.")
 					end
 				end
 			else
-				TriggerEvent("chatMessage", "^4[Tow Service]", {255, 255, 0}, "^8Script_Error: ^0No vehicle found.")
+				TriggerEvent("chatMessage", "^4[Tow Service]", {255, 255, 0}, "^8INPUT_ERR: ^0No vehicle found.")
 			end
 		end
 	end
